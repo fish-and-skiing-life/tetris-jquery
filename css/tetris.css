@@ -1,0 +1,21 @@
+.block
+{
+	width:28px;
+	height:25px;
+	background:linear-gradient(to bottom,#A8CFF1,#81B6E4) !important;
+	border:1px solid white;
+	
+}
+.cell
+{
+	width:28px;
+	height:25px;
+	/*background:linear-gradient(to bottom,#A8CFF1,#81B6E4);*/
+	background:gray;
+	
+}
+.animate
+{
+	background:linear-gradient(to bottom,#7CEEB9,#4EEFA4) !important;
+	transition:all 0.3s linear;
+}
