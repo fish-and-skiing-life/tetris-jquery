@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   window.Game = window.Game || {};
   // 定数定義teigi
   Game.row= 20;
@@ -148,6 +148,8 @@ $(document).ready(function(){
 
     // 揃った行に色をつける処理
     this.animateRow = function(row){
+      const audio = new Audio('../sound/crrect_answer3.mp3')
+      audio.play()
       for(var column=0; column< Game.column;column++){
         $("#r"+row+"c"+column).addClass("animate");
       }
@@ -160,8 +162,7 @@ $(document).ready(function(){
       this.clearGameBoard();
       for(var row=0;row< Game.row;row++){
         for(var column=0; column< Game.column;column++){
-          var className;
-          className = (this.cells[row][column] == Game.EMPTY)? 'cell': 'block'
+          var className = (this.cells[row][column] == Game.EMPTY)? 'cell': 'block';
           $("#r"+row+"c"+column).addClass(className);
         }
       }
